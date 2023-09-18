@@ -15,7 +15,7 @@ function updateCanvas(){
   random_number = Math.floor((Math.random()* quick_draw_data_set.length)+1);
   console.log(quick_draw_data_set[random_number]);
   sketch=quick_draw_data_set[random_number];
-  document.getElementById("sketch_name").innerHTML='Sketch To be Drawn'+sketch;
+  document.getElementById("Sketch_to_be_drawn").innerHTML='Sketch To be Drawn'+sketch;
 
 }
 
@@ -26,7 +26,7 @@ function gotResult(error, results){
     }
     console.log(results);
     drawn_sketch=results[0].label;
-    document.getElementById("label").innerHTML='Your Sketch: ' + drawn_sketch;
+    document.getElementById("Label").innerHTML='Your Sketch: ' + drawn_sketch;
     document.getElementById("confidence").innerHTML='Confidence: ' + Math.round(results[0].confidence * 100)  + '%';
 }
 
@@ -51,7 +51,7 @@ function draw(){
     if(drawn_sketch == sketch){
         answer_holder="set";
         score++;
-        document.getElementById("score").innerHTML = 'Score' + score;
+        document.getElementById("Score").innerHTML = 'Score' + score;
 
     }
 }
